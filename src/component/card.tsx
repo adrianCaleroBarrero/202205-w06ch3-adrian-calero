@@ -5,7 +5,6 @@ import { HttpStoreTask } from "../services/local.storage";
 import * as ac from "../redux/action.creators";
 
 export function Card({ task }: { task: iTask }) {
-  const tasks = useSelector((state) => state as iTask[]);
   const dispatch = useDispatch();
   const api = new HttpStoreTask();
 
