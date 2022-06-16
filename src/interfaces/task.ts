@@ -1,6 +1,6 @@
 export interface iTask {
   id: number;
   task: string;
-  resposible: string;
-  isComplete: Boolean;
+  responsible: string;
+  isComplete: boolean;
 }

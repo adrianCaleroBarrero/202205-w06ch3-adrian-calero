@@ -1,0 +1,22 @@
+{
+  "tasks": [
+    {
+      "task": "Hacer un formulario",
+      "responsible": "Yo",
+      "isComplete": false,
+      "id": 58494
+    },
+    {
+      "task": "Entender Redux",
+      "responsible": "YO",
+      "isComplete": true,
+      "id": 31631
+    },
+    {
+      "task": "adfad",
+      "responsible": "dagadv",
+      "isComplete": true,
+      "id": 98541
+    }
+  ]
+}

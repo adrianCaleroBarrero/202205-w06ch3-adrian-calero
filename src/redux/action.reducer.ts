@@ -1,8 +1,8 @@
 import * as ac from "./action.creators";
-import { iTask } from "../interfaces/task";
 import { createReducer } from "@reduxjs/toolkit";
+import { TaskModel } from "../model/task";
 
-const initialState: Array<iTask> = [];
+const initialState: Array<TaskModel> = [];
 export const taskReducer = createReducer(initialState, (builder) => {
   return builder
     .addCase(ac.loadTaskAction, (state, action) => [...action.payload])

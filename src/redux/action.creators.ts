@@ -2,6 +2,11 @@ import { createAction } from "@reduxjs/toolkit";
 import { iTask } from "../interfaces/task";
 import { actionTypes } from "./action.types";
 
+export interface iActions {
+  type: actionTypes;
+  payload?: any;
+}
+
 export const loadTaskAction = createAction<iTask[]>(actionTypes["task@load"]);
 export const addTaskAction = createAction<iTask>(actionTypes["task@create"]);
 export const modifyTaskAction = createAction<iTask>(actionTypes["task@modify"]);
