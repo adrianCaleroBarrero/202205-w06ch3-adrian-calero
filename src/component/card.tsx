@@ -1,5 +1,4 @@
-import { SyntheticEvent, useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { iTask } from "../interfaces/task";
 import { HttpStoreTask } from "../services/local.storage";
 import * as ac from "../redux/action.creators";
