@@ -1,6 +1,7 @@
 import { screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import "react-redux";
+import { HttpStoreTask } from "../services/local.storage";
 import { render } from "../services/test.utils";
 import { store } from "../store/store";
 import { Form } from "./form";
@@ -16,6 +17,9 @@ const preloadedState = {
 };
 
 describe("Given the component form", () => {
+  beforeEach(() => {
+    HttpStoreTask.prototype.addTask = jest.fn().mockResolvedValue({});
+  });
   describe("When i render", () => {
     test("Then it should rendered", () => {
       render(<Form />, { preloadedState, store });
