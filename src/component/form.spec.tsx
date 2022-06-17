@@ -1,6 +1,7 @@
 import { screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import "react-redux";
+import { useDispatch } from "react-redux";
 import { HttpStoreTask } from "../services/local.storage";
 import { render } from "../services/test.utils";
 import { store } from "../store/store";
@@ -16,9 +17,13 @@ const preloadedState = {
   tasks: [],
 };
 
+const useDispatchMock = useDispatch as jest.Mock;
+const mockDispatch = jest.fn();
+
 describe("Given the component form", () => {
   beforeEach(() => {
     HttpStoreTask.prototype.addTask = jest.fn().mockResolvedValue({});
+    useDispatchMock.mockImplementation(mockDispatch);
   });
   describe("When i render", () => {
     test("Then it should rendered", () => {
